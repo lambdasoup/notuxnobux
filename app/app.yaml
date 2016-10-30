@@ -7,6 +7,6 @@ handlers:
   upload: index.html
   secure: always
 
-- url: /api/(.*)
+- url: /(.*)
   script: _go_app
   secure: always
