@@ -7,6 +7,11 @@ handlers:
   upload: index.html
   secure: always
 
+- url: /elm-app.js
+  static_files: elm-app.js
+  upload: elm-app.js
+  secure: always
+
 - url: /(.*)
   script: _go_app
   secure: always

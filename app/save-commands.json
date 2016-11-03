@@ -1,0 +1,6 @@
+{
+    "timeout": 5000,
+    "commands" : [
+        "app/**/*.elm : elm make App.elm --output=elm-app.js"
+    ]
+}
