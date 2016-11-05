@@ -2,6 +2,7 @@ package app
 
 import (
 	"net/http"
+	"net/url"
 
 	"github.com/lambdasoup/notuxnobux/steam"
 )
@@ -16,7 +17,8 @@ func loginFunc(w http.ResponseWriter, r *http.Request) {
 
 	switch steam.Mode(r) {
 	case "":
-		http.Redirect(w, r, steam.AuthURLFor(r).String(), http.StatusSeeOther)
+		rtu, _ := url.Parse("http://localhost:8080/#login")
+		http.Redirect(w, r, steam.AuthURLFor(r, rtu).String(), http.StatusSeeOther)
 	case "cancel":
 		w.Write([]byte("authorization cancelled"))
 	default:

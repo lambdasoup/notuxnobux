@@ -27,7 +27,7 @@ var (
 )
 
 // AuthURLFor returns the openID auth url for the given request context
-func AuthURLFor(r *http.Request) *url.URL {
+func AuthURLFor(r *http.Request, rtu *url.URL) *url.URL {
 	c := appengine.NewContext(r)
 
 	// ignore err bc is const
@@ -39,7 +39,7 @@ func AuthURLFor(r *http.Request) *url.URL {
 	q.Set("openid.mode", "checkid_setup")
 	q.Set("openid.ns", openIDNs)
 	q.Set("openid.realm", realm(r).String())
-	q.Set("openid.return_to", requestURI(r).String())
+	q.Set("openid.return_to", rtu.String())
 	u.RawQuery = q.Encode()
 
 	log.Debugf(c, "redirect url: %v", u.String())

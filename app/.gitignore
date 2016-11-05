@@ -1,6 +1,2 @@
 # elm build artifacts
-index.html
 elm-app.js
-
-# elm deps
-elm-stuff/
