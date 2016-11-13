@@ -1,18 +1,26 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <title>notuxnobux</title>
-</head>
+    <title>#notuxnobux</title>
 
-<body>
-  <div id="main"></div>
-  <script src="elm-app.js"></script>
-  <script>
-    var node = document.getElementById('main');
-    var app = Elm.Main.embed(node);
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Roboto+Mono|Roboto+Condensed:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-red.min.css" />
+
+    <!-- Event.focusin
+         Polyfill required for Firefox to support focusin and focusout events
+    -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Event.focusin"></script>
+  </head>
+
+  <body>
+    <!-- elm -->
+    <script src="elm-app.js"></script>
+    <script>
+      app = Elm.Main.fullscreen();
     </script>
-</body>
-
+  </body>
 </html>
