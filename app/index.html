@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Roboto+Mono|Roboto+Condensed:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
     <!-- Event.focusin
          Polyfill required for Firefox to support focusin and focusout events
@@ -16,11 +17,54 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Event.focusin"></script>
   </head>
 
-  <body>
-    <!-- elm -->
-    <script src="elm-app.js"></script>
-    <script>
-      app = Elm.Main.fullscreen();
-    </script>
-  </body>
+<body>
+
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">#notuxnobux</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation">
+        <div id="elm-login"/ style="height: 48px; width: 96px;"></div>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <h1>Welcome to No Tux No Bux!</h1>
+    </div>
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">#notuxnobux</div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Privacy & Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+
+<!-- elm -->
+<script src="elm-app.js"></script>
+<script>
+  var div = document.getElementById('elm-login');
+  Elm.Main.embed(div);
+</script>
+
+</body>
 </html>
