@@ -4,6 +4,6 @@
     "srcDir": "elm",
     "destDir": "app",
     "files": "**/*.elm",
-    "command": "elm make elm/App.elm --output=app/elm-app.js"
+    "command": "elm make elm/App.elm --output=app/elm-app.js &2> /dev/null"
   }
 ]
