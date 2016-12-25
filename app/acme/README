@@ -1,0 +1,6 @@
+# http://blog.seafuj.com/lets-encrypt-on-google-app-engine
+
+sudo certbot certonly -d notuxnobux.org --manual
+
+sudo openssl rsa -inform pem -in /etc/letsencrypt/live/notuxnobux.org/privkey.pem -outform pem | less
+sudo less /etc/letsencrypt/live/notuxnobux.org/fullchain.pem

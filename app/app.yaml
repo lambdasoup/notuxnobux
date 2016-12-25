@@ -1,7 +1,14 @@
+application: notuxnobux
+module: default
+version: v1
 runtime: go
 api_version: go1
 
 handlers:
+# for letsencrypt
+- url: /.well-known/acme-challenge
+  static_dir: acme
+
 - url: /
   static_files: index.html
   upload: index.html
