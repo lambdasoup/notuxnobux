@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>#notuxnobux</title>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Roboto+Mono|Roboto+Condensed:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue_grey-red.min.css" />
-    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-
-    <!-- Event.focusin
-         Polyfill required for Firefox to support focusin and focusout events
-    -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=Event.focusin"></script>
+    <style>
+    body {
+      background-color: #696969;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    h1 {
+      margin-top: 120px;
+      margin-bottom: 120px;
+      text-align: center;
+      font-size: 64px;
+    }
+    main ul {
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+    main ul li {
+      padding: 16px;
+      background-color: #808080;
+      display: inline-block;
+      width: 256px;
+    }
+    footer ul {
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+    footer ul li {
+      margin-top: 128px;
+      display: inline-block;
+    }
+    footer ul li a:visited {
+      color: #fff;
+    }
+    </style>
   </head>
 
 <body>
 
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">#notuxnobux</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation">
-        <div id="elm-login"/ style="height: 48px; width: 96px;"></div>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <h1>Welcome to No Tux No Bux!</h1>
-      <p>#notuxnobux aims at game publishers aswell as Linux gamers.</p>
-      <h2>Publishers</h2>
-      <p>If your game is not available for Linux, you will not get any money from gamers which follow #notuxnobux philosophy.</p>
-      <h2>Gamers</h2>
-      <p>Do not buy a game as long as there is not native port. Resist the urge to buy the game and boot into other OSs to play it right away.</p>
-      <h3>About this site</h3>
-      <p>This project is obviously raw and needs work. You can help speed up development at <a href="https://github.com/lambdasoup/notuxnobux">notuxnobux on GitHub</a>.</p>
-    </div>
+<div>
+  <main>
+
+    <h1>#notuxnobux</h1>
+
+    <ul>
+      <li>
+        <h2>Publishers</h2>
+        <p>If your game is not available for Linux, you will not get any money from gamers which follow #notuxnobux philosophy.</p>
+      </li>
+
+      <li>
+        <h2>Gamers</h2>
+        <p>Do not buy a game as long as there is not native port. Resist the urge to buy the game and boot into other OSs to play it right away.</p>
+      </li>
+    </ul>
+
   </main>
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo">#notuxnobux</div>
-      <ul class="mdl-mini-footer__link-list">
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Privacy & Terms</a></li>
+
+  <footer>
+
+      <ul>
+        <li><a href="https://github.com/lambdasoup/notuxnobux">GitHub</a></li>
       </ul>
-    </div>
+
   </footer>
 
 </div>
-
-<!-- elm -->
-<script src="elm-app.js"></script>
-<script>
-  var div = document.getElementById('elm-login');
-  Elm.Main.embed(div);
-</script>
 
 </body>
 </html>
